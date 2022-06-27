@@ -13,7 +13,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        //피트니스 App처럼 탭바가 반투명으로 변경 될 수 있도록
+        //탭바 배경색 변경
+        if #available(iOS 15.0, *) {
+            let appearance = UITabBarAppearance()
+            let tabBar = UITabBar()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = UIColor.white
+            tabBar.standardAppearance = appearance;
+            
+            UITabBar.appearance().scrollEdgeAppearance = appearance
+            
+        }
         return true
     }
 
@@ -30,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+
 
 
 }
