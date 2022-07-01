@@ -14,17 +14,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        //피트니스 App처럼 탭바가 반투명으로 변경 될 수 있도록
-        //탭바 배경색 변경
+        //피트니스 App처럼 탭바가 반투명으로 변경 될 수 있도록 알아보기 -> 기존 탭바 자체가 반투명으로 변경이 됨.
+        //IOS 15버전 이상일 경우 탭바 배경색 변경
         if #available(iOS 15.0, *) {
-            let appearance = UITabBarAppearance()
-            let tabBar = UITabBar()
-            appearance.configureWithOpaqueBackground()
-            appearance.backgroundColor = UIColor.white
-            tabBar.standardAppearance = appearance;
-            
-            UITabBar.appearance().scrollEdgeAppearance = appearance
-            
+//            let appearance = UITabBarAppearance()
+//            let tabBar = UITabBar()
+//            appearance.configureWithOpaqueBackground()
+//            appearance.backgroundColor = UIColor.white
+//            tabBar.standardAppearance = appearance;
+//
+//            UITabBar.appearance().scrollEdgeAppearance = appearance
+//
         }
         return true
     }
