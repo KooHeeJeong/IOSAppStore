@@ -19,6 +19,7 @@ final class TodayViewController: UIViewController {
         
         collectionView.backgroundColor = .systemBackground
         collectionView.register(TodayCellectionViewCell.self, forCellWithReuseIdentifier: "todayCell")
+        collectionView.register(TodayCollectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "TodayCollectionHeaderView")
         
         return collectionView
     }()
@@ -52,7 +53,20 @@ extension TodayViewController: UICollectionViewDataSource {
         //Cell 이 nil 이거나 없다면, 빈 UICollectionViewCell() 을 뿌려준다.
         return cell ?? UICollectionViewCell()
     }
-    
+    //TodayCollection의 HeaderView 를 설정
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard kind == UICollectionView.elementKindSectionHeader,
+              let header = collectionView.dequeueReusableSupplementaryView(
+                ofKind: kind,
+                withReuseIdentifier: "TodayCollectionHeaderView",
+                for: indexPath
+              ) as? TodayCollectionHeaderView
+        else { return UICollectionReusableView() }
+        
+        header.setupView()
+        
+        return header
+    }
     
 }
 //UICollecionView Delegate 연결
@@ -62,6 +76,22 @@ extension TodayViewController: UICollectionViewDelegateFlowLayout {
         //다양한 디바이스에 대응을 할 수 있다.
         //동일 width 값을 return 함으로써 정사각형을 만들 수 있다.
         let width = collectionView.frame.width - 32.0
+        
         return CGSize(width: width, height: width)
     }
+    
+    //Header 사이즈 지정
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        let width = collectionView.frame.width - 32.0
+        let height: CGFloat = 100.0
+        
+        return CGSize(width: width, height: height)
+    }
+    //Section Header와 Footer 사이의 값
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let value: CGFloat = 16.0
+        return UIEdgeInsets(top: value, left: value, bottom: value, right: value)
+    }
+    
+
 }
