@@ -20,11 +20,10 @@ final class AppViewController : UIViewController {
         stackView.distribution = .equalSpacing
         stackView.spacing = 0.0
         
-        let featureSectionView = UIView()
+        let featureSectionView = FeatureSectionView(frame: .zero)
         let rankingFeatureSectionView = UIView()
         let exchangeCondeButtonView = UIView()
         
-        featureSectionView.backgroundColor = .red
         rankingFeatureSectionView.backgroundColor = .blue
         exchangeCondeButtonView.backgroundColor = .yellow
         
@@ -55,6 +54,9 @@ private extension AppViewController {
         navigationItem.largeTitleDisplayMode = .always
         //무슨일이 있어도 항상 LargeTitle을 보여줌
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        //LargeTitle 이 스크롤이 될 때 부드럽게 할 수 있는 옵션이 있는지 확인 해보기
+    
     }
     
     func setupLayout() {
