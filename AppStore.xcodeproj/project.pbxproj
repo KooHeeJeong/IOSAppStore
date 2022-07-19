@@ -17,6 +17,8 @@
 		387EA68F285F5658006F1158 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 387EA68D285F5658006F1158 /* LaunchScreen.storyboard */; };
 		387EA698285F57C6006F1158 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 387EA697285F57C6006F1158 /* Kingfisher */; };
 		387EA69B285F57F0006F1158 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 387EA69A285F57F0006F1158 /* SnapKit */; };
+		389D1E322886D99700B40E0C /* FeatureSectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389D1E312886D99700B40E0C /* FeatureSectionCollectionViewCell.swift */; };
+		389D1E342886DF9700B40E0C /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389D1E332886DF9700B40E0C /* SeparatorView.swift */; };
 		38C34FDD286F294A00595C79 /* TodayCellectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C34FDC286F294A00595C79 /* TodayCellectionViewCell.swift */; };
 		38CA0E62287AC7C5007EB2C0 /* FeatureSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CA0E61287AC7C5007EB2C0 /* FeatureSectionView.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +34,8 @@
 		387EA68B285F5658006F1158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		387EA68E285F5658006F1158 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		387EA690285F5658006F1158 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		389D1E312886D99700B40E0C /* FeatureSectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureSectionCollectionViewCell.swift; sourceTree = "<group>"; };
+		389D1E332886DF9700B40E0C /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		38C34FDC286F294A00595C79 /* TodayCellectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCellectionViewCell.swift; sourceTree = "<group>"; };
 		38CA0E61287AC7C5007EB2C0 /* FeatureSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureSectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,6 +58,8 @@
 			children = (
 				3835386E2878625A00E73CCF /* AppViewController.swift */,
 				38CA0E61287AC7C5007EB2C0 /* FeatureSectionView.swift */,
+				389D1E312886D99700B40E0C /* FeatureSectionCollectionViewCell.swift */,
+				389D1E332886DF9700B40E0C /* SeparatorView.swift */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -190,8 +196,10 @@
 				387EA683285F5657006F1158 /* AppDelegate.swift in Sources */,
 				3835386D2878526300E73CCF /* TodayCollectionHeaderView.swift in Sources */,
 				3835386F2878625A00E73CCF /* AppViewController.swift in Sources */,
+				389D1E322886D99700B40E0C /* FeatureSectionCollectionViewCell.swift in Sources */,
 				38C34FDD286F294A00595C79 /* TodayCellectionViewCell.swift in Sources */,
 				387EA685285F5657006F1158 /* SceneDelegate.swift in Sources */,
+				389D1E342886DF9700B40E0C /* SeparatorView.swift in Sources */,
 				38CA0E62287AC7C5007EB2C0 /* FeatureSectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

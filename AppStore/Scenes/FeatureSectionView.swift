@@ -23,11 +23,13 @@ final class FeatureSectionView : UIView {
         collectionView.showsHorizontalScrollIndicator = false
         
         collectionView.register(
-            UICollectionViewCell.self,
+            FeatureSectionCollectionViewCell.self,
             forCellWithReuseIdentifier: "FeatureSectionCollectionViewCell")
         
         return collectionView
     }()
+    
+    private let separatorView = SeparatorView(frame: .zero)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -63,17 +65,18 @@ extension FeatureSectionView : UICollectionViewDataSource {
     
     //cellForItemAt = Sceiont Item의 연결
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureSectionCollectionViewCell", for: indexPath)
-        cell.backgroundColor = .blue
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureSectionCollectionViewCell", for: indexPath) as? FeatureSectionCollectionViewCell
+        cell?.setup()
         
-        return cell
+        return cell ?? UICollectionViewCell()
     }
 }
 
 private extension FeatureSectionView {
     func setupViews() {
         [
-            collectionView
+            collectionView,
+            separatorView
         ].forEach{
             addSubview($0)
         }
@@ -84,6 +87,13 @@ private extension FeatureSectionView {
             $0.top.equalToSuperview().inset(16.0)
             $0.bottom.equalToSuperview()
             $0.height.equalTo(snp.width)
+        }
+        
+        separatorView.snp.makeConstraints{
+            $0.leading.equalToSuperview()
+            $0.trailing.equalToSuperview()
+            $0.top.equalTo(collectionView.snp.bottom).offset(16.0)
+            $0.bottom.equalToSuperview()
         }
     }
     
