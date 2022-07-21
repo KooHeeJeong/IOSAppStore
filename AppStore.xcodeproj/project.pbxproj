@@ -17,6 +17,9 @@
 		387EA68F285F5658006F1158 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 387EA68D285F5658006F1158 /* LaunchScreen.storyboard */; };
 		387EA698285F57C6006F1158 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 387EA697285F57C6006F1158 /* Kingfisher */; };
 		387EA69B285F57F0006F1158 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 387EA69A285F57F0006F1158 /* SnapKit */; };
+		388AD20A2889741E00ACB809 /* RankingFeatureSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388AD2092889741E00ACB809 /* RankingFeatureSectionView.swift */; };
+		388AD20C288981F600ACB809 /* RankingFeatureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388AD20B288981F600ACB809 /* RankingFeatureCollectionViewCell.swift */; };
+		388AD20E28898A0300ACB809 /* ExchangeCodeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388AD20D28898A0300ACB809 /* ExchangeCodeButtonView.swift */; };
 		389D1E322886D99700B40E0C /* FeatureSectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389D1E312886D99700B40E0C /* FeatureSectionCollectionViewCell.swift */; };
 		389D1E342886DF9700B40E0C /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389D1E332886DF9700B40E0C /* SeparatorView.swift */; };
 		38C34FDD286F294A00595C79 /* TodayCellectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C34FDC286F294A00595C79 /* TodayCellectionViewCell.swift */; };
@@ -34,6 +37,9 @@
 		387EA68B285F5658006F1158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		387EA68E285F5658006F1158 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		387EA690285F5658006F1158 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		388AD2092889741E00ACB809 /* RankingFeatureSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingFeatureSectionView.swift; sourceTree = "<group>"; };
+		388AD20B288981F600ACB809 /* RankingFeatureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingFeatureCollectionViewCell.swift; sourceTree = "<group>"; };
+		388AD20D28898A0300ACB809 /* ExchangeCodeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeCodeButtonView.swift; sourceTree = "<group>"; };
 		389D1E312886D99700B40E0C /* FeatureSectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureSectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		389D1E332886DF9700B40E0C /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		38C34FDC286F294A00595C79 /* TodayCellectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCellectionViewCell.swift; sourceTree = "<group>"; };
@@ -60,6 +66,9 @@
 				38CA0E61287AC7C5007EB2C0 /* FeatureSectionView.swift */,
 				389D1E312886D99700B40E0C /* FeatureSectionCollectionViewCell.swift */,
 				389D1E332886DF9700B40E0C /* SeparatorView.swift */,
+				388AD2092889741E00ACB809 /* RankingFeatureSectionView.swift */,
+				388AD20B288981F600ACB809 /* RankingFeatureCollectionViewCell.swift */,
+				388AD20D28898A0300ACB809 /* ExchangeCodeButtonView.swift */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -193,6 +202,7 @@
 			files = (
 				387AEB452869DA0C00150622 /* TodayViewController.swift in Sources */,
 				387EA687285F5657006F1158 /* TabBarController.swift in Sources */,
+				388AD20E28898A0300ACB809 /* ExchangeCodeButtonView.swift in Sources */,
 				387EA683285F5657006F1158 /* AppDelegate.swift in Sources */,
 				3835386D2878526300E73CCF /* TodayCollectionHeaderView.swift in Sources */,
 				3835386F2878625A00E73CCF /* AppViewController.swift in Sources */,
@@ -201,6 +211,8 @@
 				387EA685285F5657006F1158 /* SceneDelegate.swift in Sources */,
 				389D1E342886DF9700B40E0C /* SeparatorView.swift in Sources */,
 				38CA0E62287AC7C5007EB2C0 /* FeatureSectionView.swift in Sources */,
+				388AD20C288981F600ACB809 /* RankingFeatureCollectionViewCell.swift in Sources */,
+				388AD20A2889741E00ACB809 /* RankingFeatureSectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,18 +21,21 @@ final class AppViewController : UIViewController {
         stackView.spacing = 0.0
         
         let featureSectionView = FeatureSectionView(frame: .zero)
-        let rankingFeatureSectionView = UIView()
-        let exchangeCondeButtonView = UIView()
-        
-        rankingFeatureSectionView.backgroundColor = .blue
-        exchangeCondeButtonView.backgroundColor = .yellow
+        let rankingFeatureSectionView = RankingFeatureSectionView(frame: .zero)
+        let exchangeCodeButtonView = ExchangeCodeButtonView(frame: .zero)
+
+        //HIG 권장 사항
+        let spacingView = UIView()
+        spacingView.snp.makeConstraints {
+            $0.height.equalTo(100.0)
+        }
         
         [
             featureSectionView,
             rankingFeatureSectionView,
-            exchangeCondeButtonView
+            exchangeCodeButtonView,
+            spacingView
         ].forEach{
-            $0.snp.makeConstraints { $0.height.equalTo(500) }
             stackView.addArrangedSubview($0)
         }
         
