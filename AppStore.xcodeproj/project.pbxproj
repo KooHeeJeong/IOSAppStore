@@ -24,6 +24,13 @@
 		389D1E342886DF9700B40E0C /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389D1E332886DF9700B40E0C /* SeparatorView.swift */; };
 		38C34FDD286F294A00595C79 /* TodayCellectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C34FDC286F294A00595C79 /* TodayCellectionViewCell.swift */; };
 		38CA0E62287AC7C5007EB2C0 /* FeatureSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CA0E61287AC7C5007EB2C0 /* FeatureSectionView.swift */; };
+		38EBBA8F288EBDC50029CD5F /* AppDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EBBA8E288EBDC50029CD5F /* AppDetailViewController.swift */; };
+		38EBBA93288EC33A0029CD5F /* Today.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38EBBA90288EC33A0029CD5F /* Today.plist */; };
+		38EBBA94288EC33A0029CD5F /* Feature.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38EBBA91288EC33A0029CD5F /* Feature.plist */; };
+		38EBBA95288EC33A0029CD5F /* RankingFeature.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38EBBA92288EC33A0029CD5F /* RankingFeature.plist */; };
+		38EBBA98288EC3DB0029CD5F /* Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EBBA97288EC3DB0029CD5F /* Today.swift */; };
+		38EBBA9A288EC4450029CD5F /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EBBA99288EC4450029CD5F /* Feature.swift */; };
+		38EBBA9C288EC4860029CD5F /* RankingFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EBBA9B288EC4860029CD5F /* RankingFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +51,13 @@
 		389D1E332886DF9700B40E0C /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		38C34FDC286F294A00595C79 /* TodayCellectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCellectionViewCell.swift; sourceTree = "<group>"; };
 		38CA0E61287AC7C5007EB2C0 /* FeatureSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureSectionView.swift; sourceTree = "<group>"; };
+		38EBBA8E288EBDC50029CD5F /* AppDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailViewController.swift; sourceTree = "<group>"; };
+		38EBBA90288EC33A0029CD5F /* Today.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Today.plist; sourceTree = "<group>"; };
+		38EBBA91288EC33A0029CD5F /* Feature.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Feature.plist; sourceTree = "<group>"; };
+		38EBBA92288EC33A0029CD5F /* RankingFeature.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RankingFeature.plist; sourceTree = "<group>"; };
+		38EBBA97288EC3DB0029CD5F /* Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Today.swift; sourceTree = "<group>"; };
+		38EBBA99288EC4450029CD5F /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
+		38EBBA9B288EC4860029CD5F /* RankingFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +93,7 @@
 				383538702878625D00E73CCF /* App */,
 				387AEB432869D9F700150622 /* Today */,
 				387EA686285F5657006F1158 /* TabBarController.swift */,
+				38EBBA8E288EBDC50029CD5F /* AppDetailViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -114,12 +129,26 @@
 			children = (
 				387EA682285F5657006F1158 /* AppDelegate.swift */,
 				387EA684285F5657006F1158 /* SceneDelegate.swift */,
+				38EBBA97288EC3DB0029CD5F /* Today.swift */,
+				38EBBA99288EC4450029CD5F /* Feature.swift */,
+				38EBBA9B288EC4860029CD5F /* RankingFeature.swift */,
+				38EBBA96288EC3400029CD5F /* Data */,
 				387AEB422869D9E800150622 /* Scenes */,
 				387EA68B285F5658006F1158 /* Assets.xcassets */,
 				387EA68D285F5658006F1158 /* LaunchScreen.storyboard */,
 				387EA690285F5658006F1158 /* Info.plist */,
 			);
 			path = AppStore;
+			sourceTree = "<group>";
+		};
+		38EBBA96288EC3400029CD5F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				38EBBA91288EC33A0029CD5F /* Feature.plist */,
+				38EBBA92288EC33A0029CD5F /* RankingFeature.plist */,
+				38EBBA90288EC33A0029CD5F /* Today.plist */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,7 +218,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				387EA68F285F5658006F1158 /* LaunchScreen.storyboard in Resources */,
+				38EBBA95288EC33A0029CD5F /* RankingFeature.plist in Resources */,
+				38EBBA93288EC33A0029CD5F /* Today.plist in Resources */,
 				387EA68C285F5658006F1158 /* Assets.xcassets in Resources */,
+				38EBBA94288EC33A0029CD5F /* Feature.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,8 +233,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				387AEB452869DA0C00150622 /* TodayViewController.swift in Sources */,
+				38EBBA98288EC3DB0029CD5F /* Today.swift in Sources */,
 				387EA687285F5657006F1158 /* TabBarController.swift in Sources */,
 				388AD20E28898A0300ACB809 /* ExchangeCodeButtonView.swift in Sources */,
+				38EBBA9C288EC4860029CD5F /* RankingFeature.swift in Sources */,
+				38EBBA9A288EC4450029CD5F /* Feature.swift in Sources */,
 				387EA683285F5657006F1158 /* AppDelegate.swift in Sources */,
 				3835386D2878526300E73CCF /* TodayCollectionHeaderView.swift in Sources */,
 				3835386F2878625A00E73CCF /* AppViewController.swift in Sources */,
@@ -211,6 +246,7 @@
 				387EA685285F5657006F1158 /* SceneDelegate.swift in Sources */,
 				389D1E342886DF9700B40E0C /* SeparatorView.swift in Sources */,
 				38CA0E62287AC7C5007EB2C0 /* FeatureSectionView.swift in Sources */,
+				38EBBA8F288EBDC50029CD5F /* AppDetailViewController.swift in Sources */,
 				388AD20C288981F600ACB809 /* RankingFeatureCollectionViewCell.swift in Sources */,
 				388AD20A2889741E00ACB809 /* RankingFeatureSectionView.swift in Sources */,
 			);

@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 
 final class FeatureSectionView : UIView {
+    private var featureList: [Feature] = []
     private lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -35,6 +36,8 @@ final class FeatureSectionView : UIView {
         super.init(frame: frame)
         
         setupViews()
+        fechData()
+        collectionView.reloadData()
     }
     
     required init?(coder: NSCoder) {
@@ -60,13 +63,15 @@ extension FeatureSectionView : UICollectionViewDelegateFlowLayout {
 extension FeatureSectionView : UICollectionViewDataSource {
     //numberOfItemsInSection = Section 의 아이템 갯수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        return featureList.count
     }
     
     //cellForItemAt = Sceiont Item의 연결
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureSectionCollectionViewCell", for: indexPath) as? FeatureSectionCollectionViewCell
-        cell?.setup()
+        
+        let feature = featureList[indexPath.item]
+        cell?.setup(feature: feature)
         
         return cell ?? UICollectionViewCell()
     }
@@ -95,6 +100,15 @@ private extension FeatureSectionView {
             $0.top.equalTo(collectionView.snp.bottom).offset(16.0)
             $0.bottom.equalToSuperview()
         }
+    }
+    
+    func fechData() {
+        guard let url = Bundle.main.url(forResource: "Feature", withExtension: "plist") else { return }
+        do{
+            let data = try Data(contentsOf: url)
+            let result = try PropertyListDecoder().decode([Feature].self, from: data)
+            featureList = result
+        }catch {}
     }
     
 }
